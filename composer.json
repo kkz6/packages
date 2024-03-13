@@ -1,0 +1,32 @@
+{
+    "name": "ralphjsmit/packages",
+    "type": "composer-plugin",
+    "require": {
+        "php": "^8.0",
+        "composer-plugin-api": "^2.0"
+    },
+    "require-dev": {
+        "composer/composer": "^2.0",
+        "pestphp/pest": "^2.30",
+        "spatie/ray": "^1.40"
+    },
+    "autoload": {
+        "psr-4": {
+            "RalphJSmit\\Packages\\": "src/"
+        }
+    },
+    "extra": {
+        "class": "RalphJSmit\\Packages\\Plugin",
+        "plugin-modifies-downloads": true
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": [
+            "vendor/bin/pest"
+        ]
+    }
+}
